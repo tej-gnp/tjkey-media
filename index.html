@@ -6,11 +6,17 @@
   <title>TJKey Media</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 </head>
 <body class="dark-theme">
   <header class="hero">
+    <video autoplay muted loop class="bg-video">
+      <source src="https://cdn.coverr.co/videos/coverr-circuit-board-1080p.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
     <div class="hero-content">
-      <h1>TJKey Media</h1>
+      <img src="logo.png" alt="TJKey Media logo" class="logo" />
+      <h1 id="headline">TJKey Media</h1>
       <p>Connecting Tech Brands with Game-Changing Influencers</p>
       <a href="#contact" class="cta-button">Let's Talk</a>
     </div>
@@ -39,5 +45,10 @@
   <footer>
     <p>&copy; 2025 TJKey Media. All rights reserved.</p>
   </footer>
+
+  <script>
+    gsap.from("#headline", {duration: 1, y: -50, opacity: 0, ease: "power2.out"});
+    gsap.from(".cta-button", {duration: 1, delay: 0.5, y: 20, opacity: 0, ease: "power2.out"});
+  </script>
 </body>
 </html>
