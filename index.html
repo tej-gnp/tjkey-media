@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TJKey Media</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body class="dark-theme">
   <header class="hero">
     <video autoplay muted loop class="bg-video">
-      <source src="https://cdn.coverr.co/videos/coverr-circuit-board-1080p.mp4" type="video/mp4">
+      <source src="https://cdn.coverr.co/videos/coverr-circuit-board-1080p.mp4" type="video/mp4" />
     </video>
     <div class="overlay"></div>
     <div class="hero-content">
@@ -24,7 +25,10 @@
 
   <section class="about">
     <h2>Who We Are</h2>
-    <p>We are a cutting-edge influencer marketing agency specialized in the tech industry. We connect innovative brands with the voices that matter.</p>
+    <p>
+      We are a cutting-edge influencer marketing agency specialized in the tech industry.
+      We connect innovative brands with the voices that matter.
+    </p>
   </section>
 
   <section class="services">
@@ -39,16 +43,11 @@
 
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:info@tjkmedia.com">info@tjkmedia.com</a> or fill out the form (coming soon).</p>
+    <p>Email us at <a href="mailto:info@tjkmedia.com">info@tjkmedia.com</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 TJKey Media. All rights reserved.</p>
   </footer>
-
-  <script>
-    gsap.from("#headline", {duration: 1, y: -50, opacity: 0, ease: "power2.out"});
-    gsap.from(".cta-button", {duration: 1, delay: 0.5, y: 20, opacity: 0, ease: "power2.out"});
-  </script>
 </body>
 </html>
