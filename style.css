@@ -1,121 +1,120 @@
-/* Base font and reset */
-body {
+:root {
+  --bg: #0c0c0c;
+  --text: #f1f1f1;
+  --primary: #00ffe5;
+  --accent: #ff0080;
+  --font-main: 'Inter', sans-serif;
+  --font-alt: 'Orbitron', sans-serif;
+}
+
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #0d0d0d;
-  color: #f2f2f2;
-  line-height: 1.6;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--text);
   overflow-x: hidden;
 }
 
-h1, h2 {
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffff;
+h1, h2, h3 {
+  font-family: var(--font-alt);
+  text-transform: uppercase;
 }
 
-/* Hero section */
-.hero {
-  position: relative;
+header.hero {
   height: 100vh;
+  background: linear-gradient(to bottom, #00000088, #000000),
+              url('https://cdn.coverr.co/videos/coverr-circuit-board-1080p.mp4') no-repeat center center / cover;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   text-align: center;
-  overflow: hidden;
+  padding: 0 2rem;
 }
 
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
+.logo {
+  width: 140px;
+  margin-bottom: 1rem;
 }
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
-  color: #cccccc;
+  color: #ccc;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
 }
 
 .cta-button {
-  background: #00ccff;
+  background-color: var(--primary);
   color: #000;
-  padding: 12px 25px;
-  text-decoration: none;
+  padding: 12px 32px;
   border-radius: 8px;
   font-weight: bold;
-  transition: background 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .cta-button:hover {
-  background: #0099cc;
+  background-color: var(--accent);
+  color: #fff;
 }
 
-.logo {
-  width: 120px;
-  margin-bottom: 20px;
-}
-
-/* Sections */
 section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
 }
 
-.about p, .services ul, .contact p {
-  color: #bbbbbb;
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-.services ul {
-  list-style-type: square;
-  padding-left: 20px;
+.services-grid div {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 16px;
+  transition: 0.3s;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+.services-grid div:hover {
+  background-color: #191919;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px #00000055;
 }
 
 footer {
-  background: #1a1a1a;
   text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
+  padding: 40px;
   color: #777;
-  margin-top: 40px;
+  font-size: 0.8rem;
+  border-top: 1px solid #222;
+  margin-top: 3rem;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .hero h1 {
     font-size: 2rem;
   }
 
   .cta-button {
-    width: 100%;
-    display: inline-block;
-  }
-
-  .logo {
-    width: 80px;
+    padding: 10px 24px;
+    font-size: 1rem;
   }
 }
